@@ -8,25 +8,46 @@ def homepage(request):
     context = {}
     return render(request, 'homepage.html')
 
+
 def company(request):
     context = {}
     return render(request, 'our_company.html')
+
 
 def expertise(request):
     context = {}
     return render(request, 'our_expertise.html')
 
+
 def projects(request):
     context = {}
     return render(request, 'our_projects.html')
+
 
 def join(request):
     context = {}
     return render(request, 'join_our_team.html')
 
+
 def media(request):
     context = {}
     return render(request, 'media.html')
+
+
+def expertise_aluminium(request):
+    context = {}
+    return render(request, 'expertise_aluminium.html')
+
+
+def expertise_interior(request):
+    context = {}
+    return render(request, 'expertise_interior.html')
+
+
+def expertise_steel(request):
+    context = {}
+    return render(request, 'expertise_steel.html')
+
 
 def emailsender(request):
     if request.method == 'POST':
@@ -39,10 +60,10 @@ def emailsender(request):
         message = f'Name: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}'
         email_from = settings.EMAIL_HOST_USER
         recipient_list = [email]
-        send_mail( subject, message, email_from, recipient_list )
+        send_mail(subject, message, email_from, recipient_list)
 
         context = {
-        'sent': 'Email successfully sent',
-    }
+            'sent': 'Email successfully sent',
+        }
 
         return JsonResponse(context, status=200)

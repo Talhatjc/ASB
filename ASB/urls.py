@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from .views import homepage, company, expertise, projects, join, media, emailsender
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +27,7 @@ urlpatterns = [
     path('join', join, name='join'),
     path('media', media, name='media'),
     path('emailsender/', emailsender, name='emailsender'),
+    path('expertise_aluminium', expertise_aluminium, name='expertise_aluminium'),
+    path('expertise_interior', expertise_interior, name='expertise_aluminium'),
+    path('expertise_steel', expertise_steel, name='expertise_aluminium'),
 ]
