@@ -2070,3 +2070,8 @@ section {
     border-left:15px solid white; 
     /* opacity: 0.2; */
 }
+
+.grid-tools.hover-slide-in {
+    transform: none;
+    opacity: 1;
+}
