@@ -8,6 +8,9 @@ def homepage(request):
     context = {}
     return render(request, 'homepage.html')
 
+def homepage_default(request):
+    context = {}
+    return render(request, 'homepage.html')
 
 def company(request):
     context = {}
